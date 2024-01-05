@@ -3,7 +3,7 @@
 var names = null
 var context = null
 
-fetch("../analysis/generated_docs/extracted_names.txt") // Replace 'your-file.txt' with the actual path to your file
+fetch("./extracted_names.txt") // Replace 'your-file.txt' with the actual path to your file
 .then(response => {
     if (!response.ok) {
         throw new Error(`Failed to fetch the file: ${response.status}`);
