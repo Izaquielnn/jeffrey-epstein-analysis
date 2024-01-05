@@ -41,14 +41,13 @@
 }
 
 #sidebar-content {
-    
     padding: 20px;
-    width: 100%;
+    width: 50vw;
     height: 100vh;
 }
 
 #pdf-content{
-    padding-top: 60px;
+    padding-top: 10px;
     width: 100%;
     height: 100vh;
 }

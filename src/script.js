@@ -39,45 +39,6 @@ function filterAndRenderNames(searchTerm) {
     renderNamesList(filteredNames);
 }
 
-function getRelatedNameContent(nameToFind) {
-    return fetch("../analysis/generated_docs/extracted_text.txt")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to fetch the file: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(content => {
-            const tokenizer = new natural.WordTokenizer();
-            const palavras = tokenizer.tokenize(content);
-
-            // Encontrar a posição do termo no texto
-            const indiceTermo = palavras.indexOf(nameToFind);
-
-            if (indiceTermo !== -1) {
-            // Definir o tamanho do contexto ao redor do termo (por exemplo, 20 caracteres)
-            const tamanhoContexto = 20;
-
-            // Determinar os índices do início e do fim do contexto ao redor do termo
-            const inicioContexto = Math.max(0, indiceTermo - tamanhoContexto);
-            const fimContexto = Math.min(palavras.length - 1, indiceTermo + nameToFind.length + tamanhoContexto);
-
-            // Extrair o contexto ao redor do termo
-            const contexto = palavras.slice(inicioContexto, fimContexto + 1).join(' ');
-
-            // Imprimir o contexto
-            console.log("Contexto:");
-            console.log(contexto);
-            } else {
-            console.log("Termo não encontrado no texto.");
-            }
-        })
-        .catch(error => {
-            console.error(`Error: ${error.message}`);
-            throw error;
-        });
-}
-
 async function customFindBox(nameToFind) {
     document.getElementById('side-bar-insto').innerHTML =  `
     Use a opção Ctrl+F ou Cmd+F para saber os contextos em que o nome  <strong>${nameToFind}</strong> aparece!
@@ -86,7 +47,7 @@ async function customFindBox(nameToFind) {
 }
 
 async function openSidebar(name) {
-    document.getElementById('sidebar').style.width = '600px';
+    document.getElementById('sidebar').style.width = '50vw';
     await customFindBox(name);
 }
 
