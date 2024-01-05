@@ -1,0 +1,71 @@
+#searchInput {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#names-container p {
+    margin: 5px 0;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+.name-link {
+    width: 250px;
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar {
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    transition: width 0.5s, padding 0.5s; /* Transition both width and padding */
+    
+}
+
+#sidebar-content {
+    
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+}
+
+#pdf-content{
+    padding-top: 60px;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.header {
+    display: block;
+    width: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    margin-left: 50px;
+    cursor: pointer;
+}

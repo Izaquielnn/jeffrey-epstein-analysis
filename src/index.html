@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Epstein Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div>
+        <input type="text" id="searchInput" placeholder="Search names...">
+    </div>
+
+    <div>
+        <p>
+            OBS: Os nomes listados aqui foram recuperados a partir de processamento de texto, por isso podem haver inconsistências nas palavras ou até mesmo repetições 
+        </p>
+    </div>
+    
+    <div id="names-container"></div>
+
+    <div id="sidebar">
+        <div>
+            <p id="side-bar-insto"></p>
+        </div>
+        <div id="sidebar-content">
+            <iframe id="pdf-content" src="../analysis/epstein-documents-943-pages.pdf" frameborder="0"></iframe>
+        </div>
+        <div id="closeBtn" onclick="closeSidebar()">×</div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
